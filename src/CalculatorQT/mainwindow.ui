@@ -1,0 +1,2427 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>430</width>
+    <height>330</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>800</width>
+    <height>800</height>
+   </size>
+  </property>
+  <property name="sizeIncrement">
+   <size>
+    <width>0</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Calculator</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow {
+	background-color: rgb(255, 255, 255);
+/*rgb(255, 238, 254);*/
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLineEdit" name="inputExpression">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>50</y>
+      <width>411</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	background-color:rgb(255, 255, 255) ;
+	border: 2px outset rgb(126, 126, 126);
+}
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="expressionLabel">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>411</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	background-color:rgb(255, 255, 255) ;
+	border: 2px outset rgb(126, 126, 126);
+}
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>172</x>
+      <y>290</y>
+      <width>251</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QPushButton" name="Graph">
+       <property name="maximumSize">
+        <size>
+         <width>70</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    border-radius: 5px;
+	background-color:rgb(249, 220, 255) ;
+    color: rgb(0, 0, 0);
+	font: 500 17px &quot;Calibri&quot;;
+	border: 3px solid rgb(247, 201, 248);
+}
+
+QPushButton:pressed {
+    background-color: rgb(247, 201, 248);
+	font-size: 19pt ;
+}</string>
+       </property>
+       <property name="text">
+        <string>Graph</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="Credit">
+       <property name="maximumSize">
+        <size>
+         <width>150</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    border-radius: 5px;
+	background-color:rgb(249, 220, 255) ;
+    color: rgb(0, 0, 0);
+	font: 500 17px &quot;Calibri&quot;;
+	border: 3px solid rgb(247, 201, 248);
+}</string>
+       </property>
+       <property name="text">
+        <string>Credit and Deposit</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>130</y>
+      <width>141</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_2">
+     <property name="sizeConstraint">
+      <enum>QLayout::SetDefaultConstraint</enum>
+     </property>
+     <item row="0" column="0">
+      <widget class="QPushButton" name="sqrt">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>40</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    border-radius: 5px;
+	background-color:rgb(201, 230, 255) ;
+    color: rgb(0, 0, 0);
+	font: 500 17px &quot;Calibri&quot;;
+	border: 3px solid rgb(140, 205, 248);
+}
+
+QPushButton:pressed {
+    background-color: rgb(140, 205, 248);
+	font-size: 25px ;
+}</string>
+       </property>
+       <property name="text">
+        <string>sqrt</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QPushButton" name="division">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>40</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    border-radius: 5px;
+	background-color:rgb(201, 230, 255) ;
+    color: rgb(0, 0, 0);
+	font: 700 17px &quot;Calibri&quot;;
+	border: 3px solid rgb(140, 205, 248);
+}
+
+QPushButton:pressed {
+    background-color: rgb(140, 205, 248);
+	font-size: 25px ;
+}</string>
+       </property>
+       <property name="text">
+        <string>/</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QPushButton" name="ln">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>40</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    border-radius: 5px;
+	background-color:rgb(201, 230, 255) ;
+    color: rgb(0, 0, 0);
+	font: 500 17px &quot;Calibri&quot;;
+	border: 3px solid rgb(140, 205, 248);
+}
+
+QPushButton:pressed {
+    background-color: rgb(140, 205, 248);
+	font-size: 25px ;
+}</string>
+       </property>
+       <property name="text">
+        <string>ln</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="2">
+      <widget class="QPushButton" name="atan">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>40</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    border-radius: 5px;
+	background-color:rgb(201, 230, 255) ;
+    color: rgb(0, 0, 0);
+	font: 500 17px &quot;Calibri&quot;;
+	border: 3px solid rgb(140, 205, 248);
+}
+
+QPushButton:pressed {
+    background-color: rgb(140, 205, 248);
+	font-size: 25px ;
+}</string>
+       </property>
+       <property name="text">
+        <string>atan</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QPushButton" name="cos">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>40</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    border-radius: 5px;
+	background-color:rgb(201, 230, 255) ;
+    color: rgb(0, 0, 0);
+	font: 500 17px &quot;Calibri&quot;;
+	border: 3px solid rgb(140, 205, 248);
+}
+
+QPushButton:pressed {
+    background-color: rgb(140, 205, 248);
+	font-size: 25px ;
+}</string>
+       </property>
+       <property name="text">
+        <string>cos</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QPushButton" name="asin">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>40</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    border-radius: 5px;
+	background-color:rgb(201, 230, 255) ;
+    color: rgb(0, 0, 0);
+	font: 500 17px &quot;Calibri&quot;;
+	border: 3px solid rgb(140, 205, 248);
+}
+
+QPushButton:pressed {
+    background-color: rgb(140, 205, 248);
+	font-size: 25px ;
+}</string>
+       </property>
+       <property name="text">
+        <string>asin</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QPushButton" name="sin">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>40</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    border-radius: 5px;
+	background-color:rgb(201, 230, 255) ;
+    color: rgb(0, 0, 0);
+	font: 500 17px &quot;Calibri&quot;;
+	border: 3px solid rgb(140, 205, 248);
+}
+
+QPushButton:pressed {
+    background-color: rgb(140, 205, 248);
+	font-size: 25px ;
+}</string>
+       </property>
+       <property name="text">
+        <string>sin</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QPushButton" name="sqr">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>40</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    border-radius: 5px;
+	background-color:rgb(201, 230, 255) ;
+    color: rgb(0, 0, 0);
+	font: 500 17px &quot;Calibri&quot;;
+	border: 3px solid rgb(140, 205, 248);
+}
+
+QPushButton:pressed {
+    background-color: rgb(140, 205, 248);
+	font-size: 25px ;
+}</string>
+       </property>
+       <property name="text">
+        <string>sqr</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="2">
+      <widget class="QPushButton" name="log">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>40</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    border-radius: 5px;
+	background-color:rgb(201, 230, 255) ;
+    color: rgb(0, 0, 0);
+	font: 500 17px &quot;Calibri&quot;;
+	border: 3px solid rgb(140, 205, 248);
+}
+
+QPushButton:pressed {
+    background-color: rgb(140, 205, 248);
+	font-size: 25px ;
+}</string>
+       </property>
+       <property name="text">
+        <string>log</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QPushButton" name="mod">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>40</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    border-radius: 5px;
+	background-color:rgb(201, 230, 255) ;
+    color: rgb(0, 0, 0);
+	font: 500 17px &quot;Calibri&quot;;
+	border: 3px solid rgb(140, 205, 248);
+}
+
+QPushButton:pressed {
+    background-color: rgb(140, 205, 248);
+	font-size: 25px ;
+}</string>
+       </property>
+       <property name="text">
+        <string>mod</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QPushButton" name="tan">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>40</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    border-radius: 5px;
+	background-color:rgb(201, 230, 255) ;
+    color: rgb(0, 0, 0);
+	font: 500 17px &quot;Calibri&quot;;
+	border: 3px solid rgb(140, 205, 248);
+}
+
+QPushButton:pressed {
+    background-color: rgb(140, 205, 248);
+	font-size: 25px ;
+}</string>
+       </property>
+       <property name="text">
+        <string>tan</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QPushButton" name="acos">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>40</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    border-radius: 5px;
+	background-color:rgb(201, 230, 255) ;
+    color: rgb(0, 0, 0);
+	font: 500 17px &quot;Calibri&quot;;
+	border: 3px solid rgb(140, 205, 248);
+}
+
+QPushButton:pressed {
+    background-color: rgb(140, 205, 248);
+	font-size: 25px ;
+}</string>
+       </property>
+       <property name="text">
+        <string>acos</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>90</y>
+      <width>411</width>
+      <height>36</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <property name="spacing">
+      <number>3</number>
+     </property>
+     <item>
+      <widget class="QPushButton" name="X_">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>20</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    border-radius: 5px;
+	background-color:rgb(247, 201, 248) ;
+    color: rgb(0, 0, 0);
+	font: 500 17px &quot;Calibri&quot;;
+	border: 3px solid rgb(230, 158, 248);
+}
+
+QPushButton:pressed {
+    background-color: rgb(230, 158, 248);
+	font-size: 25px ;
+}</string>
+       </property>
+       <property name="text">
+        <string>X</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QDoubleSpinBox" name="valueX">
+       <property name="maximumSize">
+        <size>
+         <width>65</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="decimals">
+        <number>7</number>
+       </property>
+       <property name="minimum">
+        <double>-10000000.000000000000000</double>
+       </property>
+       <property name="maximum">
+        <double>10000000.000000000000000</double>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <property name="spacing">
+        <number>5</number>
+       </property>
+       <item>
+        <widget class="QPushButton" name="multiplication">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>40</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>40</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    border-radius: 5px;
+	background-color:rgb(201, 230, 255) ;
+    color: rgb(0, 0, 0);
+	font: 700 17px &quot;Calibri&quot;;
+	border: 3px solid rgb(140, 205, 248);
+}
+
+QPushButton:pressed {
+    background-color: rgb(140, 205, 248);
+	font-size: 25px ;
+}</string>
+         </property>
+         <property name="text">
+          <string>*</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QGridLayout" name="gridLayout_3">
+         <item row="0" column="0">
+          <widget class="QPushButton" name="plus">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>40</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>40</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    border-radius: 5px;
+	background-color:rgb(201, 230, 255) ;
+    color: rgb(0, 0, 0);
+	font: 700 17px &quot;Calibri&quot;;
+	border: 3px solid rgb(140, 205, 248);
+}
+
+QPushButton:pressed {
+    background-color: rgb(140, 205, 248);
+	font-size: 25px ;
+}</string>
+           </property>
+           <property name="text">
+            <string>+</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QPushButton" name="minus">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>40</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>40</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    border-radius: 5px;
+	background-color:rgb(201, 230, 255) ;
+    color: rgb(0, 0, 0);
+	font: 700 17px &quot;Calibri&quot;;
+	border: 3px solid rgb(140, 205, 248);
+}
+
+QPushButton:pressed {
+    background-color: rgb(140, 205, 248);
+	font-size: 25px ;
+}</string>
+           </property>
+           <property name="text">
+            <string>-</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2">
+          <widget class="QPushButton" name="openBracket">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>40</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>40</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    border-radius: 5px;
+	background-color:rgb(201, 230, 255) ;
+    color: rgb(0, 0, 0);
+	font: 700 17px &quot;Calibri&quot;;
+	border: 3px solid rgb(140, 205, 248);
+}
+
+QPushButton:pressed {
+    background-color: rgb(140, 205, 248);
+	font-size: 25px ;
+}</string>
+           </property>
+           <property name="text">
+            <string>(</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="3">
+          <widget class="QPushButton" name="closeBracket">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>40</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>40</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    border-radius: 5px;
+	background-color:rgb(201, 230, 255) ;
+    color: rgb(0, 0, 0);
+	font: 700 17px &quot;Calibri&quot;;
+	border: 3px solid rgb(140, 205, 248);
+}
+
+QPushButton:pressed {
+    background-color: rgb(140, 205, 248);
+	font-size: 25px ;
+}</string>
+           </property>
+           <property name="text">
+            <string>)</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="4">
+          <widget class="QPushButton" name="deleteChar">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>40</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>40</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    border-radius: 5px;
+	background-color:rgb(201, 203, 255) ;
+    color: rgb(0, 0, 0);
+	font: 500 17px &quot;Calibri&quot;;
+	border: 3px solid  rgb(166, 175, 255);
+}
+
+QPushButton:pressed {
+    background-color: rgb(166, 175, 255);
+	font-size: 25px ;
+}</string>
+           </property>
+           <property name="text">
+            <string>C</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="5">
+          <widget class="QPushButton" name="deleteAll">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>40</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>40</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    border-radius: 5px;
+	background-color:rgb(201, 203, 255) ;
+    color: rgb(0, 0, 0);
+	font: 500 17px &quot;Calibri&quot;;
+	border: 3px solid  rgb(166, 175, 255);
+}
+
+QPushButton:pressed {
+    background-color: rgb(166, 175, 255);
+	font-size: 25px ;
+}</string>
+           </property>
+           <property name="text">
+            <string>AC</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>130</y>
+      <width>291</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <property name="sizeConstraint">
+      <enum>QLayout::SetNoConstraint</enum>
+     </property>
+     <item row="3" column="0">
+      <widget class="QPushButton" name="point">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>80</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>80</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    border-radius: 5px;
+	background-color:rgb(235, 220, 255);
+    color: rgb(0, 0, 0);
+	font: 1000 18pt &quot;Calibri&quot;;
+	border: 3px solid  rgb(210, 190, 255);
+}
+
+QPushButton:pressed {
+    background-color: rgb(193, 138, 255);
+	font-size: 25pt ;
+}</string>
+       </property>
+       <property name="text">
+        <string>.</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QPushButton" name="pushButton_3">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>80</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>80</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    border-radius: 5px;
+	background-color:rgb(235, 220, 255);
+    color: rgb(0, 0, 0);
+	font: 600 17px &quot;Calibri&quot;;
+	border: 3px solid  rgb(210, 190, 255);
+}
+
+QPushButton:pressed {
+    background-color: rgb(193, 138, 255);
+	font-size: 25px ;
+}</string>
+       </property>
+       <property name="text">
+        <string>3</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>80</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>80</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    border-radius: 5px;
+	background-color:rgb(235, 220, 255);
+    color: rgb(0, 0, 0);
+	font: 600 17px &quot;Calibri&quot;;
+	border: 3px solid  rgb(210, 190, 255);
+}
+
+QPushButton:pressed {
+    background-color: rgb(193, 138, 255);
+	font-size: 25px ;
+}</string>
+       </property>
+       <property name="text">
+        <string>2</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QPushButton" name="pushButton_5">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>80</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>80</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    border-radius: 5px;
+	background-color:rgb(235, 220, 255);
+    color: rgb(0, 0, 0);
+	font: 600 17px &quot;Calibri&quot;;
+	border: 3px solid  rgb(210, 190, 255);
+}
+
+QPushButton:pressed {
+    background-color: rgb(193, 138, 255);
+	font-size: 25px ;
+}</string>
+       </property>
+       <property name="text">
+        <string>5</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QPushButton" name="pushButton_1">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>80</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>80</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    border-radius: 5px;
+	background-color:rgb(235, 220, 255);
+    color: rgb(0, 0, 0);
+	font: 600 17px &quot;Calibri&quot;;
+	border: 3px solid  rgb(210, 190, 255);
+}
+
+QPushButton:pressed {
+    background-color: rgb(193, 138, 255);
+	font-size: 25px ;
+}</string>
+       </property>
+       <property name="text">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="2">
+      <widget class="QPushButton" name="pushButton_9">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>80</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>80</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    border-radius: 5px;
+	background-color:rgb(235, 220, 255);
+    color: rgb(0, 0, 0);
+	font: 600 17px &quot;Calibri&quot;;
+	border: 3px solid  rgb(210, 190, 255);
+}
+
+QPushButton:pressed {
+    background-color: rgb(193, 138, 255);
+	font-size: 25px ;
+}</string>
+       </property>
+       <property name="text">
+        <string>9</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QPushButton" name="pushButton_4">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>80</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>80</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    border-radius: 5px;
+	background-color:rgb(235, 220, 255);
+    color: rgb(0, 0, 0);
+	font: 600 17px &quot;Calibri&quot;;
+	border: 3px solid  rgb(210, 190, 255);
+}
+
+QPushButton:pressed {
+    background-color: rgb(193, 138, 255);
+	font-size: 25px ;
+}</string>
+       </property>
+       <property name="text">
+        <string>4</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="2">
+      <widget class="QPushButton" name="eqally">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>80</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>80</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    border-radius: 5px;
+	background-color:rgb(201, 203, 255) ;
+    color: rgb(0, 0, 0);
+	font: 900 17px &quot;Calibri&quot;;
+	border: 3px solid  rgb(166, 175, 255);
+}
+
+QPushButton:pressed {
+    background-color: rgb(166, 175, 255);
+	font-size: 25px ;
+}</string>
+       </property>
+       <property name="text">
+        <string>=</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QPushButton" name="pushButton_6">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>80</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>80</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    border-radius: 5px;
+	background-color:rgb(235, 220, 255);
+    color: rgb(0, 0, 0);
+	font: 600 17px &quot;Calibri&quot;;
+	border: 3px solid  rgb(210, 190, 255);
+}
+
+QPushButton:pressed {
+    background-color: rgb(193, 138, 255);
+	font-size: 25px ;
+}</string>
+       </property>
+       <property name="text">
+        <string>6</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QPushButton" name="pushButton_7">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>80</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>80</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    border-radius: 5px;
+	background-color:rgb(235, 220, 255);
+    color: rgb(0, 0, 0);
+	font: 600 17px &quot;Calibri&quot;;
+	border: 3px solid  rgb(210, 190, 255);
+}
+
+QPushButton:pressed {
+    background-color: rgb(193, 138, 255);
+	font-size: 25px ;
+}</string>
+       </property>
+       <property name="text">
+        <string>7</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QPushButton" name="pushButton_8">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>80</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>80</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    border-radius: 5px;
+	background-color:rgb(235, 220, 255);
+    color: rgb(0, 0, 0);
+	font: 600 17px &quot;Calibri&quot;;
+	border: 3px solid  rgb(210, 190, 255);
+}
+
+QPushButton:pressed {
+    background-color: rgb(193, 138, 255);
+	font-size: 25px ;
+}</string>
+       </property>
+       <property name="text">
+        <string>8</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QPushButton" name="pushButton_10">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>80</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>80</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    border-radius: 5px;
+	background-color:rgb(235, 220, 255);
+    color: rgb(0, 0, 0);
+	font: 600 17px &quot;Calibri&quot;;
+	border: 3px solid  rgb(210, 190, 255);
+}
+
+QPushButton:pressed {
+    background-color: rgb(193, 138, 255);
+	font-size: 25px ;
+}</string>
+       </property>
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QCustomPlot" name="widget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>439</x>
+      <y>9</y>
+      <width>351</width>
+      <height>271</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>290</y>
+      <width>341</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_4">
+     <item>
+      <widget class="QLabel" name="inputXBegin">
+       <property name="minimumSize">
+        <size>
+         <width>25</width>
+         <height>25</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>25</width>
+         <height>25</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>X1 =</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QDoubleSpinBox" name="XBegin">
+       <property name="minimumSize">
+        <size>
+         <width>65</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>65</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="minimum">
+        <double>-10000000.000000000000000</double>
+       </property>
+       <property name="maximum">
+        <double>10000000.000000000000000</double>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="inputXEnd">
+       <property name="minimumSize">
+        <size>
+         <width>25</width>
+         <height>25</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>25</width>
+         <height>25</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>X2 = </string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QDoubleSpinBox" name="XEnd">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>65</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="minimum">
+        <double>-10000000.000000000000000</double>
+       </property>
+       <property name="maximum">
+        <double>10000000.000000000000000</double>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="BuildGraph">
+       <property name="minimumSize">
+        <size>
+         <width>100</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>100</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    border-radius: 4px;
+	background-color: rgb(255, 255, 255) ;
+    color: rgb(0, 0, 0);
+	font: 500 15px &quot;Calibri&quot;;
+	border: 2px solid rgb(111, 111, 111);
+}
+
+QPushButton:pressed {
+    background-color:rgb(193, 193, 193) ;
+	font-size: 17pt ;
+}</string>
+       </property>
+       <property name="text">
+        <string>Build a graph</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>360</y>
+      <width>111</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	font: 500 15px &quot;Calibri&quot;;
+}</string>
+    </property>
+    <property name="text">
+     <string>Сумма кредита</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>340</y>
+      <width>49</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>390</y>
+      <width>91</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	font: 500 15px &quot;Calibri&quot;;
+}</string>
+    </property>
+    <property name="text">
+     <string>Срок кредита</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>420</y>
+      <width>121</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	font: 500 15px &quot;Calibri&quot;;
+}</string>
+    </property>
+    <property name="text">
+     <string>Процентная ставка</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>450</y>
+      <width>181</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	font: 500 15px &quot;Calibri&quot;;
+}</string>
+    </property>
+    <property name="text">
+     <string>Тип ежемесячных платежей</string>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="credit_summ">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>360</y>
+      <width>161</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <double>100000000000000000.000000000000000</double>
+    </property>
+    <property name="singleStep">
+     <double>10000.000000000000000</double>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>360</y>
+      <width>49</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	font: 500 15px &quot;Calibri&quot;;
+}</string>
+    </property>
+    <property name="text">
+     <string>руб.</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>390</y>
+      <width>49</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	font: 500 15px &quot;Calibri&quot;;
+}</string>
+    </property>
+    <property name="text">
+     <string>лет</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>420</y>
+      <width>49</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	font: 500 15px &quot;Calibri&quot;;
+}</string>
+    </property>
+    <property name="text">
+     <string>%</string>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="credit_term">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>390</y>
+      <width>161</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <double>30.000000000000000</double>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="credit_percent">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>420</y>
+      <width>161</width>
+      <height>25</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="annu">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>450</y>
+      <width>121</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Аннуитетные</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="diff">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>470</y>
+      <width>161</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Дифференцированные</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="credit_calc">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>490</y>
+      <width>121</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    border-radius: 5px;
+	background-color:rgb(220, 238, 255) ;
+    color: rgb(0, 0, 0);
+	font: 500 17px &quot;Calibri&quot;;
+	border: 3px solid rgb(201, 230, 248);
+}
+
+QPushButton:pressed {
+    background-color:  rgb(201, 230, 2488);
+	font-size: 19px ;
+}</string>
+    </property>
+    <property name="text">
+     <string>Рассчитать</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="credit_monthly_payment">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>360</y>
+      <width>181</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	background-color:rgb(255, 255, 255) ;
+	border: 1px solid rgb(126, 126, 126);
+	font: 500 15px &quot;Calibri&quot;;
+}
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_9">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>360</y>
+      <width>141</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	font: 500 15px &quot;Calibri&quot;;
+}</string>
+    </property>
+    <property name="text">
+     <string>Ежемесячный платеж</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_12">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>460</y>
+      <width>111</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	font: 500 15px &quot;Calibri&quot;;
+}</string>
+    </property>
+    <property name="text">
+     <string>Долг + проценты</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_11">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>410</y>
+      <width>151</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	font: 500 15px &quot;Calibri&quot;;
+}</string>
+    </property>
+    <property name="text">
+     <string>Начисленные проценты</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="credit_accr_percent">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>410</y>
+      <width>181</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	background-color:rgb(255, 255, 255) ;
+	border: 1px solid rgb(126, 126, 126);
+	font: 500 15px &quot;Calibri&quot;;
+}
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="total_credit">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>460</y>
+      <width>181</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	background-color:rgb(255, 255, 255) ;
+	border: 1px solid rgb(126, 126, 126);
+	font: 500 15px &quot;Calibri&quot;;
+}
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_15">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>330</y>
+      <width>231</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	font: 600 20px &quot;Calibri&quot;;
+}</string>
+    </property>
+    <property name="text">
+     <string>Кредитный калькулятор</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_10">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>530</y>
+      <width>261</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	font: 600 20px &quot;Calibri&quot;;
+}</string>
+    </property>
+    <property name="text">
+     <string>Депозитный калькулятор</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_13">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>560</y>
+      <width>91</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	font: 500 15px &quot;Calibri&quot;;
+}</string>
+    </property>
+    <property name="text">
+     <string>Сумма вклада</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_14">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>590</y>
+      <width>121</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	font: 500 15px &quot;Calibri&quot;;
+}</string>
+    </property>
+    <property name="text">
+     <string>Срок размещения</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>650</y>
+      <width>201</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QCheckBox {
+	font: 500 15px &quot;Calibri&quot;;
+}</string>
+    </property>
+    <property name="text">
+     <string>Капитализация процентов</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_16">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>710</y>
+      <width>81</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	font: 500 15px &quot;Calibri&quot;;
+}</string>
+    </property>
+    <property name="text">
+     <string>Пополнения</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_17">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>740</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	font: 500 15px &quot;Calibri&quot;;
+}</string>
+    </property>
+    <property name="text">
+     <string>Снятия</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_18">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>570</y>
+      <width>161</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	font: 500 15px &quot;Calibri&quot;;
+}</string>
+    </property>
+    <property name="text">
+     <string>Начисленные проценты</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_19">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>640</y>
+      <width>191</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	font: 500 15px &quot;Calibri&quot;;
+}</string>
+    </property>
+    <property name="text">
+     <string>Сумма вклада с процентами</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="deposit_accr_persent">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>600</y>
+      <width>241</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	background-color:rgb(255, 255, 255) ;
+	border: 1px solid rgb(126, 126, 126);
+	font: 500 15px &quot;Calibri&quot;;
+}
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="deposit_plus_persent">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>670</y>
+      <width>241</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	background-color:rgb(255, 255, 255) ;
+	border: 1px solid rgb(126, 126, 126);
+	font: 500 15px &quot;Calibri&quot;;
+}
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="deposit_summ">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>560</y>
+      <width>171</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <double>1000000000000000.000000000000000</double>
+    </property>
+    <property name="singleStep">
+     <double>10000.000000000000000</double>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="deposit_term">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>590</y>
+      <width>171</width>
+      <height>25</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="deposit_repl">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>710</y>
+      <width>171</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <double>100000000000.000000000000000</double>
+    </property>
+    <property name="singleStep">
+     <double>5000.000000000000000</double>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="deposit_with">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>740</y>
+      <width>171</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <double>10000000000000.000000000000000</double>
+    </property>
+    <property name="singleStep">
+     <double>5000.000000000000000</double>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="deposit_calc">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>770</y>
+      <width>121</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    border-radius: 5px;
+	background-color:rgb(220, 238, 255) ;
+    color: rgb(0, 0, 0);
+	font: 500 17px &quot;Calibri&quot;;
+	border: 3px solid rgb(201, 230, 248);
+}
+
+QPushButton:pressed {
+    background-color:  rgb(201, 230, 2488);
+	font-size: 19px ;
+}</string>
+    </property>
+    <property name="text">
+     <string>Рассчитать</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_20">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>620</y>
+      <width>121</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	font: 500 15px &quot;Calibri&quot;;
+}</string>
+    </property>
+    <property name="text">
+     <string>Процентная ставка</string>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="deposit_percent">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>620</y>
+      <width>171</width>
+      <height>25</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_21">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>590</y>
+      <width>49</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	font: 500 15px &quot;Calibri&quot;;
+}</string>
+    </property>
+    <property name="text">
+     <string>лет</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_22">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>560</y>
+      <width>49</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	font: 500 15px &quot;Calibri&quot;;
+}</string>
+    </property>
+    <property name="text">
+     <string>руб.</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_23">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>620</y>
+      <width>49</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	font: 500 15px &quot;Calibri&quot;;
+}</string>
+    </property>
+    <property name="text">
+     <string>%</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_24">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>710</y>
+      <width>49</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	font: 500 15px &quot;Calibri&quot;;
+}</string>
+    </property>
+    <property name="text">
+     <string>руб.</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_25">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>740</y>
+      <width>49</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	font: 500 15px &quot;Calibri&quot;;
+}</string>
+    </property>
+    <property name="text">
+     <string>руб.</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_26">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>680</y>
+      <width>151</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	font: 500 15px &quot;Calibri&quot;;
+}</string>
+    </property>
+    <property name="text">
+     <string>Периодичность выплат</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_27">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>680</y>
+      <width>49</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	font: 500 15px &quot;Calibri&quot;;
+}</string>
+    </property>
+    <property name="text">
+     <string>мес.</string>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="deposit_period">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>680</y>
+      <width>121</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <double>12.000000000000000</double>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QCustomPlot</class>
+   <extends>QWidget</extends>
+   <header>qcustomplot.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
